@@ -43,7 +43,7 @@ int main() {
                             scanf("%d",&withdraw);
                             balance = withdraw - balance;
                         
-                            if (withdraw > balance){
+                            if (withdraw < balance){
                                 printf("\nInsuffecient Balance.\n");
                             }                       
                             else{
