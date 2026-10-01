@@ -5,7 +5,7 @@ int main() {
         input,
         pin = 2008,
         choice,
-        balance = 67,
+        balance = 600,
         deposit,
         withdraw;
     
@@ -24,31 +24,37 @@ int main() {
                 printf("\n1. Deposit\n2. Withdraw\n3. Balance\n4. Exit\n");
                 printf("\nEnter your choice: ");
                 scanf("%d", &choice);
-                
+          
                 switch (choice) {
                     case 1:
                         do {
-                            printf("Enter the amount to deposit: ");
+                            printf("\nEnter the amount to deposit: ");
                             scanf("%d", &deposit);
-                            if (deposit < 50) {
-                                printf("Please deposit at least 50.\n");
+                            if (deposit < 20 || deposit % 20 != 0) {
+                                printf("No coins allowed. Please deposit paper bills.\n");                                
                             }
-                        } while (deposit < 50);
+                        } while (deposit < 20 || deposit % 20 != 0);
                         
                         balance = balance + deposit;
                         printf("\nYou deposited P%d. Your new balance is P%d\n", deposit, balance);
                         break;                      
                     case 2:                        
-                            printf("Enter the amount to witdraw: ");
-                            scanf("%d",&withdraw);
-                            balance = withdraw - balance;
-                        
-                            if (withdraw < balance){
-                                printf("\nInsuffecient Balance.\n");
-                            }                       
-                            else{
-                               printf("Succesfully withdraw P%d, Your new balance P%d\n",withdraw,balance);
-                             }
+                            printf("\nEnter the amount to withdraw: ");
+                            scanf("%d", &withdraw);
+
+                                    if (withdraw <= balance) {
+                                        if (withdraw % 20 != 0) {
+                                                    printf("\nPlease withdraw an amount that is a multiple of 20.\n");
+                                        } 
+                                        else {
+                                            balance = balance - withdraw;
+                                            printf("\nSuccessfully withdrew P%d. Your new balance is P%d\n", withdraw, balance);       
+                                        }  
+                                      }                                   
+                                    else {
+                                        printf("Insufficient Balance\n");
+                                    }
+    break;
                         break;
                         
                     case 3:
