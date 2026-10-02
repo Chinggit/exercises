@@ -1,12 +1,13 @@
-# 🌳 Parks and Recreation SQL Exercises
+# 🌳 Parks and Recreation SQL Practice
 
-This repository section contains SQL exercise solutions based on the **Parks and Recreation** dataset from Alex The Analyst's Full SQL Bootcamp.
+This repository section contains my personal SQL exercise queries built on top of the **Parks and Recreation** database schema provided by Alex The Analyst in his Full SQL Bootcamp[cite: 1]. 
 
-This database serves as the foundation and basis for all the SQL exercise files in this folder.
+This dataset serves as the base schema for all the custom SQL exercises and practice files in this folder.
+
 
 ## 📊 Database Overview
 
-The database consists of two core relational tables linked by `employee_id`:
+The base database consists of two core relational tables linked by `employee_id`[cite: 1]:
 
-1. **`employee_demographics`**: Stores personal information (ID, name, age, gender, birth date).
-2. **`employee_salary`**: Stores employment details (ID, name, occupation, salary, department ID).
+1. **`employee_demographics`**: Personal information (ID, name, age, gender, birth date)[cite: 1].
+2. **`employee_salary`**: Employment details (ID, name, occupation, salary, department ID)[cite: 1].
